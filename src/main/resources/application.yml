@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    datasource-user:
+      jdbcUrl: jdbc:mysql://192.168.79.130:3306/user?characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true&useSSL=true&zeroDateTimeBehavior=convertToNull&autoReconnect = true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+    datasource-user-read:
+      jdbcUrl: jdbc:mysql://192.168.79.131:3306/user?characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true&useSSL=true&zeroDateTimeBehavior=convertToNull&autoReconnect = true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: wzh
+      password: yali
+    datasource-order:
+      jdbcUrl: jdbc:mysql://192.168.79.130:3306/order?characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true&useSSL=true&zeroDateTimeBehavior=convertToNull&autoReconnect = true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+    datasource-order-read:
+      jdbcUrl: jdbc:mysql://192.168.79.131:3306/order?characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true&useSSL=true&zeroDateTimeBehavior=convertToNull&autoReconnect = true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: wzh
+      password: yali
+mybatis:
+  mapper-locations: classpath:/mappers/**/*.xml
+logging:
+  level:
+    com.shyb: debug
